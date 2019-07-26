@@ -1,0 +1,248 @@
+<!DOCTYPE html>  
+ <html>  
+      <head>
+	  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="../dist/css/lightgallery.css" rel="stylesheet">
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> 
+	   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>  
+	   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />  
+	   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>  
+	   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.css" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.js"></script>
+		   
+		<style type="text/css">
+
+            body {
+              font-family: Arial, Helvetica, sans-serif;
+            }
+            
+            .demo-gallery > ul {
+              margin-bottom: 0;
+            }
+            .demo-gallery > ul > li {
+                float: left;
+                margin-bottom: 15px;
+                margin-right: 20px;
+                width: 200px;
+            }
+            .demo-gallery > ul > li a {
+              border: 3px solid #FFF;
+              border-radius: 3px;
+              display: block;
+              overflow: hidden;
+              position: relative;
+              float: left;
+            }
+            .demo-gallery > ul > li a > img {
+              -webkit-transition: -webkit-transform 0.15s ease 0s;
+              -moz-transition: -moz-transform 0.15s ease 0s;
+              -o-transition: -o-transform 0.15s ease 0s;
+              transition: transform 0.15s ease 0s;
+              -webkit-transform: scale3d(1, 1, 1);
+              transform: scale3d(1, 1, 1);
+              height: 100%;
+              width: 100%;
+            }
+            .demo-gallery > ul > li a:hover > img {
+              -webkit-transform: scale3d(1.1, 1.1, 1.1);
+              transform: scale3d(1.1, 1.1, 1.1);
+            }
+            .demo-gallery > ul > li a:hover .demo-gallery-poster > img {
+              opacity: 1;
+            }
+            .demo-gallery > ul > li a .demo-gallery-poster {
+              background-color: rgba(0, 0, 0, 0.1);
+              bottom: 0;
+              left: 0;
+              position: absolute;
+              right: 0;
+              top: 0;
+              -webkit-transition: background-color 0.15s ease 0s;
+              -o-transition: background-color 0.15s ease 0s;
+              transition: background-color 0.15s ease 0s;
+            }
+            .demo-gallery > ul > li a .demo-gallery-poster > img {
+              left: 50%;
+              margin-left: -10px;
+              margin-top: -10px;
+              opacity: 0;
+              position: absolute;
+              top: 50%;
+              -webkit-transition: opacity 0.3s ease 0s;
+              -o-transition: opacity 0.3s ease 0s;
+              transition: opacity 0.3s ease 0s;
+            }
+            .demo-gallery > ul > li a:hover .demo-gallery-poster {
+              background-color: rgba(0, 0, 0, 0.5);
+            }
+            .demo-gallery .justified-gallery > a > img {
+              -webkit-transition: -webkit-transform 0.15s ease 0s;
+              -moz-transition: -moz-transform 0.15s ease 0s;
+              -o-transition: -o-transform 0.15s ease 0s;
+              transition: transform 0.15s ease 0s;
+              -webkit-transform: scale3d(1, 1, 1);
+              transform: scale3d(1, 1, 1);
+              height: 100%;
+              width: 100%;
+            }
+            .demo-gallery .justified-gallery > a:hover > img {
+              -webkit-transform: scale3d(1.1, 1.1, 1.1);
+              transform: scale3d(1.1, 1.1, 1.1);
+            }
+            .demo-gallery .justified-gallery > a:hover .demo-gallery-poster > img {
+              opacity: 1;
+            }
+            .demo-gallery .justified-gallery > a .demo-gallery-poster {
+              background-color: rgba(0, 0, 0, 0.1);
+              bottom: 0;
+              left: 0;
+              position: absolute;
+              right: 0;
+              top: 0;
+              -webkit-transition: background-color 0.15s ease 0s;
+              -o-transition: background-color 0.15s ease 0s;
+              transition: background-color 0.15s ease 0s;
+            }
+            .demo-gallery .justified-gallery > a .demo-gallery-poster > img {
+              left: 50%;
+              margin-left: -10px;
+              margin-top: -10px;
+              opacity: 0;
+              position: absolute;
+              top: 50%;
+              -webkit-transition: opacity 0.3s ease 0s;
+              -o-transition: opacity 0.3s ease 0s;
+              transition: opacity 0.3s ease 0s;
+            }
+            .demo-gallery .justified-gallery > a:hover .demo-gallery-poster {
+              background-color: rgba(0, 0, 0, 0.5);
+            }
+            .demo-gallery .video .demo-gallery-poster img {
+              height: 48px;
+              margin-left: -24px;
+              margin-top: -24px;
+              opacity: 0.8;
+              width: 48px;
+            }
+            .demo-gallery.dark > ul > li a {
+              border: 3px solid #04070a;
+            }
+            .home .demo-gallery {
+              padding-bottom: 80px;
+            }
+
+           
+            ul {
+              list-style-type: none;
+              margin: 0;
+              padding: 0;
+              overflow: hidden;
+              width: 100%;
+              background-color: white;
+            }
+
+            ul {
+              float: left;
+            }
+
+            li a, .dropbtn {
+              display: inline-block;
+              color: white;
+              text-align: center;
+              padding: 16px 16px;
+              text-decoration: none;
+            }
+
+            li a:hover, .dropdown:hover .dropbtn {
+              background-color: #f2f2f2;
+            }
+
+            li.dropdown {
+              display: inline-block;
+            }
+
+            .dropdown-content {
+              display: none;
+              position: absolute;
+              background-color: #f2f2f2;
+              min-width: 160px;
+              box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+              z-index: 1;
+            }
+
+            .dropdown-content a {
+              color: #595959;
+              padding: 14px 16px;
+              text-decoration: none;
+              display: block;
+              text-align: left;
+            }
+
+            .dropdown-content a:hover {background-color: #e6e6e6
+            ;}
+
+            .dropdown:hover .dropdown-content {
+              display: block;
+            }
+
+            * {
+              box-sizing: border-box;
+            }
+
+           table {
+                border-collapse: collapse;
+                border: 2px black solid;
+                font: 16px sans-serif;
+                text-align: center;
+            }
+
+            td {
+                border: 1px black solid;
+                padding: 5px;
+                padding-left: 10px;
+                padding-right: 10px;
+
+            }    
+        </style>
+      </head>  
+      <body class="home">		
+		<div>
+        <ul>
+        <li><a style="float:left; color:#8c8c8c; font-size: 16px;">IMAGE PROCESSING BASED SMART SURVEILLANCE SYSTEM</a></li>
+		<li><a href="../../../ln.html" style="float:right; color:#8c8c8c; font-size: 16px;">Logout</a></li>
+		<li><a href="HOME1.html" style="float:right; color:#8c8c8c; font-size: 16px;">Home</a></li>
+		<li><a href="/PHPPresentation-develop/samples/my.php" style="float:right; color:#8c8c8c; font-size: 16px;">PowerPoint</a></li>
+        
+      </ul>
+      </div>
+	  <center><div>
+      <img src="e.png" style="width: 200px; padding-top: 20px;" />
+    <center><p style="font-size: 36px; color: #1a1a1a; ">REPORT OF SYSTEM</p></center>
+	</div></center>
+	
+	
+     
+           <div class="container" style="width:98%;">                   
+                <div class="container box">
+   <br />
+  <center><div class="table-responsive" >
+   
+	
+	 <form action="my.pptx">
+      <div class="input-daterange">
+       
+       <input type="submit" name="download" value="Download PPT" class="btn btn-info" />
+      </div>
+     </form>
+                <br />  
+				</div></center>
+                	   
+		   
+		 <script src="https://cdn.jsdelivr.net/picturefill/2.3.1/picturefill.min.js"></script>
+        <script src="../dist/js/lightgallery-all.min.js"></script>
+        <script src="../lib/jquery.mousewheel.min.js"></script>
+      </body>  
+ </html>  
